@@ -1,5 +1,11 @@
 {
   "name": "Honeycrisp Apples",
-  "description":"This sweet and juicy apple makes for the perfect fall dish. These apples were harvested on our family farm in September. The season lasts until late fall."
-  
+  "description":"This sweet and juicy apple makes for the perfect fall dish. These apples were harvested on our family farm in September. The season lasts until late fall.",
+  "images": ["https://res.cloudinary.com/dhj9kukfn/image/upload/v1688595708/honeycrisp%20apples/v81nc5xzzofqstdq80km.png"],
+  "quantity": "15",
+  "price": "1.99",
+  "priceUnit": "lb",
+  "category": "64a5f03a2e1f77ce634f29e4",
+  "farm": "64a5d729d9c34ec696287123",
+  "traits": ["Organic", "In Season", "Ripened"]
 }

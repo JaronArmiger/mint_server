@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
+const categoryRouter = require("./routes/category");
 const farmRouter = require("./routes/farm");
 const productRouter = require("./routes/product");
 
@@ -11,6 +12,7 @@ const app = express();
 
 app.use(express.json());
 
+app.use(categoryRouter);
 app.use(farmRouter);
 app.use(productRouter);
 
