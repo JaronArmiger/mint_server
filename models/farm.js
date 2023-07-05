@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const { ratingSchema } = require("./rating");
+const { locationSchema } = require("./location");
 
 const farmSchema = mongoose.Schema({
   name: {
@@ -29,5 +30,6 @@ const farmSchema = mongoose.Schema({
     type: Number,
     required: true,
   },
+  location: locationSchema,
   rating: [ratingSchema],
 });
