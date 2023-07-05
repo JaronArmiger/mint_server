@@ -1,0 +1,12 @@
+{
+  "name": "Mint Family Farm",
+  "values": ["Organic", "Family-Owned", "Zero Waste", "Plastic-Free Packaging"],
+  "email": "tory@mintfamily.io",
+  "phoneNumber": "9165442425",
+  "location": {
+    "streetAddress": "21 Chiapas Blvd",
+    "city": "Salinas",
+    "state": "California",
+    "zipcode": "93901"
+  }
+}

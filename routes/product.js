@@ -1,6 +1,8 @@
 const express = require("express");
 const { Product } = require("../models/product");
 
+const productRouter = express.Router();
+
 productRouter.post("/api/product/create", async (req, res) => {
   try {
     const {
@@ -33,3 +35,5 @@ productRouter.post("/api/product/create", async (req, res) => {
     res.status(500).json({ error: e.message });
   }
 });
+
+module.exports = productRouter;

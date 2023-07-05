@@ -27,9 +27,13 @@ const farmSchema = mongoose.Schema({
     required: true,
   },
   phoneNumber: {
-    type: Number,
+    type: String,
     required: true,
   },
   location: locationSchema,
-  rating: [ratingSchema],
+  ratings: [ratingSchema],
 });
+
+const Farm = mongoose.model("Farm", farmSchema);
+
+module.exports = { Farm };
