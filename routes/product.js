@@ -3,6 +3,17 @@ const { Product } = require("../models/product");
 
 const productRouter = express.Router();
 
+productRouter.get("/api/product/find-by-id/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const product = await Product.findById(id);
+
+    res.json(product);
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 productRouter.post("/api/product/create", async (req, res) => {
   try {
     const {

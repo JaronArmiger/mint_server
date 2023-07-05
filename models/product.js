@@ -32,13 +32,9 @@ const productSchema = mongoose.Schema({
     enum: ["lb", "oz"],
   },
   // ONE category has MANY products
-  category: {
-    category: { type: mongoose.Types.ObjectId, ref: "Category" },
-  },
+  category: { type: mongoose.Types.ObjectId, ref: "Category" },
   // ONE farm has MANY products
-  farm: {
-    farm: { type: mongoose.Types.ObjectId, ref: "Farm" },
-  },
+  farm: { type: mongoose.Types.ObjectId, ref: "Farm" },
   traits: [
     {
       type: String,
