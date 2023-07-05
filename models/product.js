@@ -46,6 +46,7 @@ const productSchema = mongoose.Schema({
       enum: ["Organic", "In Season", "End of Season", "Ripened"],
     },
   ],
+  ratings: [ratingSchema],
 });
 
 const Product = mongoose.model("Product", productSchema);
