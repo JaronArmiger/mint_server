@@ -4,7 +4,12 @@ const { locationSchema } = require("./location");
 const { productSchema } = require("./product");
 
 const userSchema = mongoose.Schema({
-  name: {
+  firstName: {
+    required: true,
+    type: String,
+    trim: true,
+  },
+  lastName: {
     required: true,
     type: String,
     trim: true,
@@ -22,11 +27,27 @@ const userSchema = mongoose.Schema({
       message: "Please enter a valid email address",
     },
   },
-  validate: {
-    validator: (value) => {
-      return value.length > 6;
+  phoneNumber: {
+    type: String,
+    required: true,
+    validate: {
+      validator: (value) => {
+        const re = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/i;
+
+        return value.match(re);
+      },
+      message: "Please enter a valid phone number",
     },
-    message: "Password must be longer than 6 characters",
+  },
+  password: {
+    required: true,
+    type: String,
+    validate: {
+      validator: (value) => {
+        return value.length > 6;
+      },
+      message: "Password must be longer than 6 characters",
+    },
   },
   address: locationSchema,
   role: {
