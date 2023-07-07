@@ -32,7 +32,7 @@ const userSchema = mongoose.Schema({
     required: true,
     validate: {
       validator: (value) => {
-        const re = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/i;
+        const re = /^(\+\d{1,2}\s?)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/i;
 
         return value.match(re);
       },
